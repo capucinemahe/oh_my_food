@@ -1,0 +1,18 @@
+body 
+{
+	width:  375px;
+	height: auto;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+a  /* supprime le soulignement et la couleur violette des textes cliquables */
+{ 
+	text-decoration: none;
+	color: initial;
+} 
+#header {
+	width: 23.438rem;
+	height: 3.94rem;
+	font-family: 'Shrikhand';
+}
