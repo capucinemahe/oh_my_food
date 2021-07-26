@@ -28,6 +28,7 @@ a  /* supprime le soulignement et la couleur violette des textes cliquables */
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+
 .researchcity {
 	width: 23.438rem;
 	height: 3.13rem;
@@ -70,7 +71,7 @@ padding-right: 0.75rem;
 	margin-top: -0.3rem;
 }
 .buttonexplore {
-	background-color: rgb(221,83,210);
+	background: linear-gradient(to right bottom, #FF79DA, #9356DC);
 	border-radius: 2.5rem;
 	width: 13.6rem;
 	color: white;
@@ -89,14 +90,16 @@ padding-right: 0.75rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	padding-left: 1rem;
+	padding-top: 1rem;
 }
 
 .lesvignettesf {
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-
+ 
 .vignettef {
 	width: 20.6rem;
 	height: 4.4rem;
@@ -110,6 +113,20 @@ justify-content: space-evenly;
 	box-shadow: 0.3rem 0.3rem 0.3rem rgb(230, 230, 230);
     margin: 1rem 0 0.5rem 0.5rem;
 	cursor: pointer;
+	position: relative;
+	padding-left: 1rem;
+}
+.number {
+	width: 1.6rem;
+	height: 1.6rem;
+	font-size: 0.9rem;
+	background-color: #9356DC;
+	color: white;
+	border-radius: 100%;
+    text-align: center;
+	line-height: 1.7rem;
+	position: absolute;
+	bottom: 1.3rem; left: -0.5rem;
 }
 
 .vignettef i {
@@ -128,7 +145,7 @@ justify-content: space-evenly;
 	background-color: rgb(244,244,244);
 	width: 375px;
 	height: auto;
-	padding: 2rem 0 2rem 0;
+	padding: 2rem 0 3rem 0;
 }
 
 #restaurants h1 {
@@ -141,7 +158,8 @@ padding-left: 1rem;
 	width: 20.9rem;
 	height: 15.6rem;
 	border-radius: 1.6rem;
-	margin: 1rem 0.5rem 1rem 1rem;
+	margin: 0.5rem 0.5rem 0.6rem 1rem;
+	position: relative;
 }
 
 .reglagephoto {
@@ -149,6 +167,18 @@ padding-left: 1rem;
 	height: 10.9rem;
 	object-fit: cover;
 	border-radius: 1.6rem 1.6rem 0 0;
+}
+.new {
+	width: 5rem;
+	height: 1.9rem;
+	background-color: #99E2D0;
+	font-size: 0.9rem;
+	color: rgb(21,119,83);
+	text-align: center;
+	line-height: 1.9rem;
+	border-radius: 0.2rem;
+	position: absolute;
+	bottom: 12.5rem; left: 15rem;
 }
 
 .souslaphoto {
