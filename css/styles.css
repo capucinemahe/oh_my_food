@@ -1,239 +1,361 @@
-body 
-{
-	width:  375px;
-	height: auto;
-	background-color: white;
-	font-family: 'Roboto', sans-serif;
+body {
+  min-width: 320px;
+  max-width: 425px;
+  height: auto;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
 }
-
-a  /* supprime le soulignement et la couleur violette des textes cliquables */
-{ 
-	text-decoration: none;
-	color: initial;
-} 
+/* supprime le soulignement et la couleur violette des textes cliquables */
+a {
+  text-decoration: none;
+  color: initial;
+}
 #header {
-	width: 23.438rem;
-	height: 3.94rem;
-	font-family: 'Shrikhand';
+  width: 100%;
+  height: 3.94rem;
+  position: relative;
 }
 .logoh {
-	font-size: 2rem;
-	text-align: center;
+  width: 10.3rem;
+  height: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 6rem;
 }
 
 #research {
-	width: 23.438rem;
-	height: 20.93rem;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+  width: 100%;
+  height: 20.93rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .researchcity {
-	width: 23.438rem;
-	height: 3.13rem;
-	background-color: rgb(229,229,229);
-	text-align: center;
-	padding-top: 1rem;
-	margin-bottom: -1rem;
+  width: 100%;
+  height: 3.13rem;
+  background-color: rgb(229, 229, 229);
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
 }
 .researchcity i {
-padding-right: 0.75rem;
+  padding-right: 0.75rem;
 }
 
-.researchinput{
-	border-style: none;
-	background-color: rgb(229,229,229);
-	font-size: 1rem;
-	color: black;
+.researchinput {
+  border-style: none;
+  background-color: rgb(229, 229, 229);
+  font-size: 1rem;
+  color: black;
+  cursor: text;
 }
 .explore {
-	width: 23.438rem;
-	height: 17.8rem;
-	background-color: rgb(244,244,244);
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: baseline;
+  width: 100%;
+  height: 17.8rem;
+  background-color: rgb(244, 244, 244);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
 }
 .explore h1 {
-	font-size: 1.5rem;
-	font-weight: 500;
-	padding: 1rem 3rem 0 3rem;
-	margin-bottom: -3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 3rem 0 3rem;
+  margin-bottom: -3rem;
 }
 .explore h2 {
-	font-size: 1rem;
-	font-weight: 100;
-	padding: 0 1rem 0 1rem;
-	margin-top: -0.3rem;
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 0 1rem 0 1rem;
+  margin-top: -0.3rem;
 }
 .buttonexplore {
-	background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-	border-radius: 2.5rem;
-	width: 13.6rem;
-	color: white;
-	cursor: pointer;
-	font-weight: 400;
-	display: flex;
-    flex-direction: row;
-    justify-content: center;
-	padding: 1rem 0.3rem 1rem 0.3rem;
-	margin-top: -2rem;
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  border-radius: 2.5rem;
+  width: 13.6rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0.3rem 1rem 0.3rem;
+  margin-top: -2rem;
 }
 
 #function {
-	width: 23.438rem;
-	height: 27.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	padding-left: 1rem;
-	padding-top: 1rem;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  padding-top: 1rem;
 }
 
 .lesvignettesf {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
- 
+
 .vignettef {
-	width: 20.6rem;
-	height: 4.4rem;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-    align-items: baseline;
-	background-color:rgb(244,244,244);
-	border-radius: 1.5rem;
-	box-shadow: 0.3rem 0.3rem 0.3rem rgb(230, 230, 230);
-    margin: 1rem 0 0.5rem 0.5rem;
-	cursor: pointer;
-	position: relative;
-	padding-left: 1rem;
+  width: 16rem;
+  height: 4.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  background-color: rgb(244, 244, 244);
+  border-radius: 1.5rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgb(230, 230, 230);
+  margin: 1rem 0 0.5rem 0.5rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1rem;
 }
+
 .number {
-	width: 1.6rem;
-	height: 1.6rem;
-	font-size: 0.9rem;
-	background-color: #9356DC;
-	color: white;
-	border-radius: 100%;
-    text-align: center;
-	line-height: 1.7rem;
-	position: absolute;
-	bottom: 1.3rem; left: -0.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0.9rem;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1.7rem;
+  position: absolute;
+  bottom: 1.3rem;
+  left: -0.5rem;
 }
 
 .vignettef i {
-	padding: 1rem;
-	font-size: 1.2rem;
-	color: rgb(107,107,107);
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: rgb(107, 107, 107);
 }
 
 .vignettef p {
-	padding-top: 0.65rem;
+  padding-top: 0.65rem;
 }
 
 #restaurants {
-	display: flex;
-	flex-direction: column;
-	background-color: rgb(244,244,244);
-	width: 375px;
-	height: auto;
-	padding: 2rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(244, 244, 244);
+  width: 100%;
+  height: auto;
+  padding: 2rem 0 3rem 0;
 }
 
 #restaurants h1 {
-padding-left: 1rem;
+  padding-left: 1rem;
 }
 
 .vignetterestau {
-	background: white;
-	border-radius: 1.25rem;
-	width: 20.9rem;
-	height: 15.6rem;
-	border-radius: 1.6rem;
-	margin: 0.5rem 0.5rem 0.6rem 1rem;
-	position: relative;
+  background: white;
+  border-radius: 1.25rem;
+  width: 18rem;
+  height: 15.6rem;
+  border-radius: 1.6rem;
+  margin: 0.5rem 0.5rem 0.6rem 1rem;
+  position: relative;
 }
 
 .reglagephoto {
-	width: 20.9rem;
-	height: 10.9rem;
-	object-fit: cover;
-	border-radius: 1.6rem 1.6rem 0 0;
+  width: 18rem;
+  height: 10.9rem;
+  object-fit: cover;
+  border-radius: 1.6rem 1.6rem 0 0;
 }
 .new {
-	width: 5rem;
-	height: 1.9rem;
-	background-color: #99E2D0;
-	font-size: 0.9rem;
-	color: rgb(21,119,83);
-	text-align: center;
-	line-height: 1.9rem;
-	border-radius: 0.2rem;
-	position: absolute;
-	bottom: 12.5rem; left: 15rem;
+  width: 5rem;
+  height: 1.9rem;
+  background-color: #99e2d0;
+  font-size: 0.9rem;
+  color: rgb(21, 119, 83);
+  text-align: center;
+  line-height: 1.9rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  bottom: 12.5rem;
+  left: 12rem;
 }
 
 .souslaphoto {
-	width: 20.9rem;
-	height: 4.7rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  width: 18rem;
+  height: 4.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .text {
-	padding-left: 1rem;
+  padding-left: 1rem;
 }
 .text h3 {
-    font-size: 1.1rem;
-	margin-top: 0.6rem;
-
+  font-size: 1.1rem;
+  margin-top: 0.6rem;
 }
 .district {
-	font-weight: 100;
-	margin-top: -0.8rem;
+  font-weight: 100;
+  margin-top: -0.8rem;
 }
 
 .souslaphoto i {
-	font-size: 1.7rem;
-	padding: 0.8rem 1.3rem 0 0;
+  font-size: 1.7rem;
+  padding: 0.8rem 1.3rem 0 0;
 }
 
-#footer{
-	background-color: rgb(40,40,40);
-	color: white;
-	padding: 0 0 1.5rem 1rem;
+#footer {
+  background-color: rgb(40, 40, 40);
+  color: white;
+  padding: 0 0 1.5rem 1rem;
+}
+
+#footer a {
+  color: white;
+  cursor: pointer;
 }
 
 .logof {
-	font-family: 'Shrikhand';
-	color: white;
-	font-size: 1.1rem;
-	padding: 1rem 0 1rem 1rem;
+  font-family: "Shrikhand";
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .suggest .partner {
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .suggest {
-	padding-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
 }
 
 .suggest i {
-	font-size: 0.8rem;
-	margin-right: 1rem;
+  font-size: 0.8rem;
+  margin-right: 1rem;
 }
 .partner i {
-	margin-right: 0.7rem;
-	font-size: 0.8rem;
+  margin-right: 0.7rem;
+  font-size: 0.8rem;
+}
+
+/* nouvelles règles si mon site est consulté sur un écran de tablette */
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .body {
+    width: 100%;
+  }
+  #header {
+    width: 100%;
+    height: 5rem;
+  }
+  .logoh {
+    width: 12rem;
+    height: 1.8rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 18rem;
+  }
+
+  #research {
+    width: 100%;
+    height: 16rem;
+  }
+  .researchcity {
+    width: 100%;
+    height: 4rem;
+    padding-left: 4rem;
+  }
+  .researchcity .researchinput {
+    font-size: 1.2rem;
+  }
+  .researchcity i {
+    font-size: 1.2rem;
+  }
+  .explore {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .explore h1 {
+    padding: 2rem 0 0 0;
+    margin: 0;
+  }
+  .explore h2 {
+    font-size: 1.2rem;
+    padding: 0;
+    margin-top: -7rem;
+  }
+  .buttonexplore {
+    width: 15rem;
+    padding: 1rem 0.6rem 1rem 0.6rem;
+    margin-top: -6rem;
+    margin-bottom: 5rem;
+  }
+
+  #function {
+    height: 25.5rem;
+    padding: 6rem 9.5rem 2rem 15.5rem;
+  }
+  #function h1 {
+    padding-left: 3.3rem;
+    padding-bottom: 1.5rem;
+  }
+  .vignettef {
+    width: 18rem;
+    margin: 0 0 2rem 0;
+  }
+
+  #restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 47rem;
+    padding: 1rem 0 3rem 1rem;
+  }
+  #restaurants h1 {
+    padding-left: 19rem;
+  }
+  .vignetterestau {
+    margin: 1.3rem 1rem 0.6rem 1rem;
+  }
+
+  #footer {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 4rem;
+  }
+  .logof {
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem 0;
+    margin-left: -1rem;
+  }
+  #footer p {
+    padding-top: 3rem;
+  }
+}
+
+/* nouvelles règles si mon site est consulté sur un écran d'ordinateur classic */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/* nouvelles règles si mon site est consulté sur un grand écran */
+
+@media screen and (min-width: 1025px) {
 }
