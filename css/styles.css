@@ -1,6 +1,5 @@
 body {
-  min-width: 320px;
-  max-width: 425px;
+  width: 100%;
   height: auto;
   background-color: white;
   font-family: "Roboto", sans-serif;
@@ -12,89 +11,87 @@ a {
 }
 #header {
   width: 100%;
-  height: 3.94rem;
-  position: relative;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logoh {
-  width: 10.3rem;
-  height: 1.5rem;
+  width: 10rem;
+  height: 1.8rem;
   cursor: pointer;
-  position: absolute;
-  bottom: 1.5rem;
-  left: 6rem;
 }
 
 #research {
   width: 100%;
-  height: 20.93rem;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
 }
-
 .researchcity {
   width: 100%;
-  height: 3.13rem;
+  height: auto;
   background-color: rgb(229, 229, 229);
-  text-align: center;
-  padding-top: 1rem;
-  margin-bottom: -1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0 1rem 0;
 }
 .researchcity i {
   padding-right: 0.75rem;
 }
-
 .researchinput {
+  width: 8rem;
   border-style: none;
   background-color: rgb(229, 229, 229);
   font-size: 1rem;
   color: black;
   cursor: text;
 }
+
 .explore {
   width: 100%;
-  height: 17.8rem;
+  height: auto;
   background-color: rgb(244, 244, 244);
-  text-align: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 3rem;
 }
 .explore h1 {
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 1rem 3rem 0 3rem;
-  margin-bottom: -3rem;
+  padding: 1rem 2rem 0 2rem;
 }
 .explore h2 {
   font-size: 1rem;
   font-weight: 100;
-  padding: 0 1rem 0 1rem;
-  margin-top: -0.3rem;
+  margin-top: -0.5rem;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
 }
 .buttonexplore {
   background: linear-gradient(to right bottom, #ff79da, #9356dc);
   border-radius: 2.5rem;
   width: 13.6rem;
+  padding: 1rem 0 1rem 0;
   color: white;
   cursor: pointer;
   font-weight: 400;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 1rem 0.3rem 1rem 0.3rem;
-  margin-top: -2rem;
+  text-align: center;
 }
 
 #function {
-  width: 100%;
+  width: 95%;
   height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left: 1rem;
+  padding-left: 5%;
   padding-top: 1rem;
 }
 
@@ -158,18 +155,18 @@ a {
   padding-left: 1rem;
 }
 
-.vignetterestau {
-  background: white;
+.vignetter {
+  background-color: white;
   border-radius: 1.25rem;
-  width: 18rem;
-  height: 15.6rem;
+  width: 90%;
+  height: 25%;
   border-radius: 1.6rem;
-  margin: 0.5rem 0.5rem 0.6rem 1rem;
+  margin: 1rem 0 1rem 0.8rem;
   position: relative;
 }
 
 .reglagephoto {
-  width: 18rem;
+  width: 100%;
   height: 10.9rem;
   object-fit: cover;
   border-radius: 1.6rem 1.6rem 0 0;
@@ -187,9 +184,8 @@ a {
   bottom: 12.5rem;
   left: 12rem;
 }
-
 .souslaphoto {
-  width: 18rem;
+  width: 100%;
   height: 4.7rem;
   display: flex;
   flex-direction: row;
@@ -206,40 +202,35 @@ a {
   font-weight: 100;
   margin-top: -0.8rem;
 }
-
 .souslaphoto i {
   font-size: 1.7rem;
   padding: 0.8rem 1.3rem 0 0;
 }
 
 #footer {
+  width: 100%;
   background-color: rgb(40, 40, 40);
   color: white;
-  padding: 0 0 1.5rem 1rem;
+  padding-bottom: 2rem;
 }
-
-#footer a {
+.mailto a {
   color: white;
   cursor: pointer;
+  padding-left: 1.3rem;
 }
-
 .logof {
   font-family: "Shrikhand";
   color: white;
   font-size: 1.1rem;
   padding: 1rem 0 1rem 1rem;
 }
-
-.suggest .partner {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
 .suggest {
   padding-bottom: 0.8rem;
+  padding-left: 1.3rem;
 }
-
+.partner {
+  padding-left: 1.3rem;
+}
 .suggest i {
   font-size: 0.8rem;
   margin-right: 1rem;
@@ -248,111 +239,130 @@ a {
   margin-right: 0.7rem;
   font-size: 0.8rem;
 }
+#footer p {
+  padding-left: 1.3rem;
+}
 
 /* nouvelles règles si mon site est consulté sur un écran de tablette */
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-  .body {
-    width: 100%;
-  }
   #header {
     width: 100%;
-    height: 5rem;
+    height: 4rem;
   }
   .logoh {
-    width: 12rem;
-    height: 1.8rem;
-    position: absolute;
-    bottom: 2rem;
-    left: 18rem;
+    width: 40%;
+    height: 50%;
+    padding-left: 9rem;
   }
-
-  #research {
-    width: 100%;
-    height: 16rem;
-  }
-  .researchcity {
-    width: 100%;
-    height: 4rem;
-    padding-left: 4rem;
-  }
-  .researchcity .researchinput {
-    font-size: 1.2rem;
-  }
-  .researchcity i {
-    font-size: 1.2rem;
-  }
-  .explore {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .explore h1 {
-    padding: 2rem 0 0 0;
-    margin: 0;
-  }
-  .explore h2 {
-    font-size: 1.2rem;
-    padding: 0;
-    margin-top: -7rem;
-  }
-  .buttonexplore {
-    width: 15rem;
-    padding: 1rem 0.6rem 1rem 0.6rem;
-    margin-top: -6rem;
-    margin-bottom: 5rem;
-  }
-
   #function {
-    height: 25.5rem;
-    padding: 6rem 9.5rem 2rem 15.5rem;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 0;
   }
-  #function h1 {
-    padding-left: 3.3rem;
-    padding-bottom: 1.5rem;
+  .lesvignettesf {
+    align-items: center;
+    width: 95%;
+    padding-bottom: 2rem;
+    padding-left: 5%;
   }
-  .vignettef {
-    width: 18rem;
-    margin: 0 0 2rem 0;
-  }
-
   #restaurants {
+    padding: 1.3rem 0 3rem 0;
+  }
+  #restaurants h1 {
+    padding-left: 2rem;
+  }
+  .lesvignettesr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 47rem;
-    padding: 1rem 0 3rem 1rem;
   }
-  #restaurants h1 {
-    padding-left: 19rem;
+  .vignetter {
+    width: 45%;
+    margin: 1rem 0.8rem 1rem 0.8rem;
   }
-  .vignetterestau {
-    margin: 1.3rem 1rem 0.6rem 1rem;
-  }
-
-  #footer {
-    width: 100%;
-    height: 8rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-left: 4rem;
-  }
-  .logof {
-    font-size: 1.5rem;
-    padding: 1rem 0 1rem 0;
-    margin-left: -1rem;
-  }
-  #footer p {
-    padding-top: 3rem;
+  .new {
+    position: absolute;
+    bottom: auto;
+    left: 90%;
   }
 }
 
 /* nouvelles règles si mon site est consulté sur un écran d'ordinateur classic */
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  #function {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 0;
+  }
+  .lesvignettesf {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 95%;
+    padding-bottom: 3rem;
+    padding-left: 0;
+  }
+  .vignettef {
+    margin-left: 1.3rem;
+  }
 
+  #restaurants {
+    width: 97%;
+    padding-top: 1.3rem;
+    padding-left: 3%;
+  }
+  #restaurants h1 {
+    text-align: center;
+    padding: 0;
+  }
+  .lesvignettesr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .vignetter {
+    width: 45%;
+    margin: 1rem;
+  }
+
+  #footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logof {
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem 0 2rem;
+  }
+
+  .part1footer {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+  .suggest {
+    padding: 0 0 1.5rem 0;
+  }
+  .partner {
+    padding: 0;
+  }
+  .part2footer {
+    padding: 1rem 2rem 1rem 2rem;
+    line-height: 1rem;
+  }
+
+  #footer p {
+    padding-left: 1.3rem;
+    padding-bottom: 0.7rem;
+  }
+  .mailto a {
+    padding-left: 1.3rem;
+  }
 }
 
 /* nouvelles règles si mon site est consulté sur un grand écran */
