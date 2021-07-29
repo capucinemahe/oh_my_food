@@ -63,12 +63,12 @@ a {
   text-align: center;
   padding-bottom: 3rem;
 }
-.explore h1 {
-  font-size: 1.5rem;
+.titreexplore {
+  font-size: 1.3rem;
   font-weight: 500;
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2.5rem 1rem 2.5rem;
 }
-.explore h2 {
+.explore p {
   font-size: 1rem;
   font-weight: 100;
   margin-top: -0.5rem;
@@ -86,13 +86,20 @@ a {
 }
 
 #function {
-  width: 95%;
+  width: 96.5%;
   height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left: 5%;
+  align-items: center;
+  text-align: center;
+  padding-left: 3.5%;
   padding-top: 1rem;
+}
+
+#function h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .lesvignettesf {
@@ -148,11 +155,17 @@ a {
   background-color: rgb(244, 244, 244);
   width: 100%;
   height: auto;
-  padding: 2rem 0 3rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 #restaurants h1 {
-  padding-left: 1rem;
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.lesvignettesr {
+  width: 98%;
+  margin-left: 2%;
 }
 
 .vignetter {
@@ -161,7 +174,7 @@ a {
   width: 90%;
   height: 25%;
   border-radius: 1.6rem;
-  margin: 1rem 0 1rem 0.8rem;
+  margin: 0 0 1rem 0.8rem;
   position: relative;
 }
 
@@ -245,7 +258,7 @@ a {
 
 /* nouvelles règles si mon site est consulté sur un écran de tablette */
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (min-width: 523px) and (max-width: 767px) {
   #header {
     width: 100%;
     height: 4rem;
@@ -291,29 +304,32 @@ a {
 
 /* nouvelles règles si mon site est consulté sur un écran d'ordinateur classic */
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #function {
     width: 100%;
     height: auto;
     align-items: center;
     padding: 0;
   }
+  #function h1 {
+    padding-top: 1rem;
+  }
   .lesvignettesf {
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    width: 95%;
+    width: 98%;
+    margin-right: 2%;
     padding-bottom: 3rem;
-    padding-left: 0;
   }
   .vignettef {
-    margin-left: 1.3rem;
+    margin: 0 0.5rem 0 0;
   }
 
   #restaurants {
-    width: 97%;
+    width: 100%;
     padding-top: 1.3rem;
-    padding-left: 3%;
   }
   #restaurants h1 {
     text-align: center;
@@ -323,6 +339,8 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0%;
   }
   .vignetter {
     width: 45%;
@@ -367,5 +385,5 @@ a {
 
 /* nouvelles règles si mon site est consulté sur un grand écran */
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
 }
