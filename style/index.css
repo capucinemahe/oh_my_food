@@ -1,10 +1,10 @@
 body {
-  width: 100%;
-  height: auto;
-  background-color: white;
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* supprime le soulignement et la couleur violette des textes cliquables */
 a {
   text-decoration: none;
   color: initial;
@@ -27,8 +27,7 @@ a {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+  margin: auto;
 }
 .research__city {
   width: 100%;
@@ -82,7 +81,7 @@ a {
   color: white;
   cursor: pointer;
   font-weight: 400;
-  text-align: center;
+  margin: auto;
 }
 .explore__button :hover {
   background-color: #ae80e5;
@@ -245,6 +244,22 @@ a {
 
 /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 
+@media screen and (min-width: 426px) {
+  .function {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .function h2 {
+    margin: auto;
+  }
+  .function__cards {
+    margin: auto;
+  }
+}
+
+/* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
+
 @media screen and (min-width: 1024px) {
   .function {
     width: 100%;
@@ -253,7 +268,7 @@ a {
     padding: 0;
   }
   .function h2 {
-    padding-top: 1rem;
+    padding: 2rem;
   }
   .function__cards {
     flex-direction: row;
