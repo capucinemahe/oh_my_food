@@ -1,0 +1,155 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+.header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+
+  i {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 40%;
+    left: 3%;
+  }
+}
+
+.header__logo {
+  width: 10.3rem;
+  height: 1.7rem;
+  cursor: pointer;
+  padding-top: 0.6rem;
+}
+
+.header__menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__menu__picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.header__menu__title {
+  font-family: "Shrikhand";
+  border-radius: 1.6rem 1.6rem 0 0;
+  background-color: $fond-lightgrey;
+  margin-top: -10%;
+  @include flex_row_nowrap_between_center;
+  padding-left: 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.header__menu__title i {
+  font-size: 1.5rem;
+  padding-right: 2rem;
+}
+
+.major {
+  display: flex;
+  flex-direction: column;
+  background-color: $fond-lightgrey;
+  position: relative;
+}
+
+.menu__title {
+  font-weight: 200;
+  font-size: 1rem;
+  border-bottom: solid $mint;
+  width: 2.5rem;
+  margin-left: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu__card {
+  background-color: white;
+  width: 90%;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  height: 4.25rem;
+  border-radius: 1rem;
+  @include flex_row_nowrap_between_center;
+  @include box-shadow;
+}
+
+.menu__card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 1.7rem;
+}
+
+.menu__card__title {
+  font-size: 1.1rem;
+  @include text-ajust;
+}
+
+.menu__card__description {
+  font-weight: 100;
+  font-size: 0.85rem;
+  @include text-ajust;
+}
+
+.menu__card__price {
+  padding-top: 1.6rem;
+  font-weight: bold;
+}
+
+.btn__order {
+  @include button;
+  width: 11rem;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* nouvelles règles si mon site est consulté sur un écran de tablette */
+
+@media screen and (min-width: 426px) {
+
+}
+
+/* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
+
+@media screen and (min-width: 1024px) {
+  .major {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .menu {
+    width: 94%;
+    margin-right: 3%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .btn__order {
+    background-color: rgb(244, 244, 244);
+  }
+}
