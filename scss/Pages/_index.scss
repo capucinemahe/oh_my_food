@@ -14,15 +14,14 @@ a {
 .research {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     margin: auto;
 }
 
 .research__city {
     width: 100%;
     background-color: rgb(229, 229, 229);
-    @include flex_row_center;
+    @include flex(row, center);
     padding: 1rem 0 1rem 0;
     i {
         padding-right: 0.75rem;
@@ -42,7 +41,7 @@ a {
     width: 100%;
     height: auto;
     background-color: $fond-lightgrey;
-  @include flex_column_between_center;
+    @include flex(column, space-between, center, center);
     padding-bottom: 3rem;
 }
 
@@ -75,8 +74,7 @@ a {
 .function {
     width: 95%;
     height: auto;
-    display: flex;
-    flex-direction: column;
+   @include flex(column);
     padding: 1rem 0 2rem 5%;
       h2 {
     font-size: 1.3rem;
@@ -86,17 +84,14 @@ a {
 }
 
 .function__cards {
-    @include flex_column_between_center;
+    @include flex(column, space-between, center, center);
 }
 
 .function__card {
     width: 16rem;
     height: 4.4rem;
-    display: flex;
-    flex-direction: row;
+    @include flex(row, flex-start, center, center);
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
     background-color: $fond-lightgrey;
     border-radius: 1.5rem;
     @include box-shadow;
@@ -127,8 +122,7 @@ a {
 }
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
+  @include flex(column);
     background-color: $fond-lightgrey;
     width: 97%;
     height: auto;
@@ -166,10 +160,7 @@ a {
 .underphoto {
     width: 100%;
     height: 4.7rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+    @include flex(row, space-between);
 
 .underphoto__text {
     padding-left: 1rem;
@@ -220,7 +211,7 @@ a {
 
 /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px){
     .function {
         width: 97%;
         height: auto;
@@ -232,10 +223,8 @@ a {
     }
 
     .function__cards {
-        flex-direction: row;
+        @include flex(row, space-between, center);
         flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
         width: 98%;
         margin-right: 2%;
         padding-bottom: 3rem;
@@ -254,8 +243,7 @@ a {
     }
 
     .restaurants__labels {
-        display: flex;
-        flex-direction: row;
+        @include flex(row);
         flex-wrap: wrap;
         width: 100%;
         padding-left: 0%;

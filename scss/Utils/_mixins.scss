@@ -1,32 +1,15 @@
-@mixin flex_row_center {
+@mixin flex($direction, $justify, $aligni, $alignc) {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-@mixin flex_column_between_center {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-}
-
-@mixin flex_row_nowrap_between_center {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aligni;
+    align-content: $alignc;
+  }
 
 @mixin button {
     border-radius: 2.5rem;
     cursor: pointer;
-    background: linear-gradient(to right bottom, #ff79da, #9356dc);
+    background: linear-gradient(to right bottom, $rose, $violet);
     color: white;
     margin: auto;
     text-align: center;
@@ -47,6 +30,7 @@
 }
 
 @mixin text-ajust {
-    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
