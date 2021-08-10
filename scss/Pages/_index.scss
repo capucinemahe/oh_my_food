@@ -14,15 +14,17 @@ a {
 .research {
     width: 100%;
     height: auto;
-    @include flex(column);
+    display: flex;
+    flex-direction: column;
     margin: auto;
 }
 
 .research__city {
     width: 100%;
     background-color: rgb(229, 229, 229);
-    @include flex(row, center);
+    @include flex(row, center, center);
     padding: 1rem 0 1rem 0;
+
     i {
         padding-right: 0.75rem;
     }
@@ -41,7 +43,8 @@ a {
     width: 100%;
     height: auto;
     background-color: $fond-lightgrey;
-    @include flex(column, space-between, center, center);
+    @include flex(column, space-between, center);
+    text-align: center;
     padding-bottom: 3rem;
 }
 
@@ -65,32 +68,28 @@ a {
     margin: auto;
 }
 
-/*.explore__button :hover {
-    background-color: #ae80e5;
-    background-blend-mode: lighten;
-    box-shadow: 6px 6px 8px grey;
-  }*/
-
 .function {
     width: 95%;
     height: auto;
-   @include flex(column);
+    display: flex;
+    flex-direction: column;
     padding: 1rem 0 2rem 5%;
-      h2 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding-bottom: 0.5rem;
-}
+
+    h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+    }
 }
 
 .function__cards {
-    @include flex(column, space-between, center, center);
+    @include flex(column, space-between, center);
 }
 
 .function__card {
     width: 16rem;
     height: 4.4rem;
-    @include flex(row, flex-start, center, center);
+    @include flex(row, flex-start, center);
     flex-wrap: nowrap;
     background-color: $fond-lightgrey;
     border-radius: 1.5rem;
@@ -122,17 +121,19 @@ a {
 }
 
 .restaurants {
-  @include flex(column);
+    display: flex;
+    flex-direction: column;
     background-color: $fond-lightgrey;
     width: 97%;
     height: auto;
     padding: 1rem 0 2rem 3%;
-   h2 {
-    width: 98%;
-    padding-left: 2%;
-    font-size: 1.3rem;
-    font-weight: 500;
-}
+
+    h2 {
+        width: 98%;
+        padding-left: 2%;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
 }
 
 .restaurants__labels {
@@ -160,97 +161,102 @@ a {
 .underphoto {
     width: 100%;
     height: 4.7rem;
-    @include flex(row, space-between);
+    @include flex(row, space-between, center);
 
-.underphoto__text {
-    padding-left: 1rem;
-    h3 {
-    font-size: 1.1rem;
-    margin-top: 0.6rem;
-}
-}
-.underphoto__text p {
-    font-weight: 100;
-    margin-top: -0.8rem;
-}
+    .underphoto__text {
+        padding-left: 1rem;
 
-.underphoto i {
-    font-size: 1.7rem;
-    padding: 0.8rem 1.3rem 0 0;
-}
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 0.6rem;
+        }
+    }
 
-.card__new {
-    width: 5rem;
-    height: 1.9rem;
-    background-color: $mint;
-    color: rgb(21, 119, 83);
-    font-size: 0.9rem;
-    text-align: center;
-    line-height: 1.9rem;
-    border-radius: 0.3rem;
-    position: absolute;
-    bottom: 80%;
-    right: 8%;
-}
+    .underphoto__text p {
+        font-weight: 100;
+        margin-top: -0.8rem;
+    }
 
-/* nouvelles règles si mon site est consulté sur un écran de tablette */
+    .underphoto i {
+        font-size: 1.7rem;
+    }
 
-@media screen and (min-width: 426px) {
-    .function {
-        width: 100%;
-        padding-left: 0;
-        h2 {
+    .card__new {
+        width: 5rem;
+        height: 1.9rem;
+        background-color: $mint;
+        color: rgb(21, 119, 83);
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.9rem;
+        border-radius: 0.3rem;
+        position: absolute;
+        top: 4rem;
+    }
+
+    /* nouvelles règles si mon site est consulté sur un écran de tablette */
+
+    @media screen and (min-width: 426px) {
+        .function {
+            width: 100%;
+            padding-left: 0;
+
+            h2 {
+                margin: auto;
+                text-align: center;
+            }
+        }
+
+        .function__cards {
             margin: auto;
         }
     }
 
-    .function__cards {
-        margin: auto;
-    }
-}
+    /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 
-/* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
+    @media screen and (min-width: 1024px) {
+        .function {
+            align-items: center;
+            align-content: center;
+            padding-left: 3%;
 
-@media screen and (min-width: 1024px){
-    .function {
-        width: 97%;
-        height: auto;
-        align-items: center;
-        padding-left: 3%;
-        h2 {
-            padding: 2rem;
+            h2 {
+                padding: 2rem;
+            }
         }
-    }
 
-    .function__cards {
-        @include flex(row, space-between, center);
-        flex-wrap: nowrap;
-        width: 98%;
-        margin-right: 2%;
-        padding-bottom: 3rem;
-    }
-
-    .function__card {
-        margin: 0 0.5rem 0 0;
-    }
-
-    .restaurants {
-        padding-top: 1.3rem;
-        h2 {
-            text-align: center;
-            padding: 0;
+        .function__cards {
+            @include flex(row, space-between, center);
+            flex-wrap: nowrap;
+            width: 98%;
+            margin-right: 2%;
+            padding-bottom: 3rem;
         }
-    }
 
-    .restaurants__labels {
-        @include flex(row);
-        flex-wrap: wrap;
-        width: 100%;
-        padding-left: 0%;
-    }
+        .function__card {
+            margin: 0 0.5rem 0 0;
+        }
 
-    .restaurant__card {
-        width: 45%;
-        margin: 1rem;
+        .restaurants {
+            padding-top: 1.3rem;
+
+            h2 {
+                text-align: center;
+                padding: 0;
+            }
+        }
+
+        .restaurants__labels {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-left: 0%;
+        }
+
+        .restaurant__card {
+            width: 45%;
+            margin: 1rem;
+        }
     }
 }

@@ -53,7 +53,8 @@ a {
   border-radius: 1.6rem 1.6rem 0 0;
   background-color: $fond-lightgrey;
   margin-top: -10%;
-  @include flex_row_nowrap_between_center;
+  @include flex(row, space-between, center);
+  flex-wrap: nowrap;
   padding-left: 1rem;
 
   h1 {
@@ -93,7 +94,8 @@ a {
   padding: 0.5rem;
   height: 4.25rem;
   border-radius: 1rem;
-  @include flex_row_nowrap_between_center;
+  @include flex(row,space-between,center);
+ flex-wrap: nowrap;
   @include box-shadow;
 }
 
@@ -130,24 +132,44 @@ a {
 
 /* nouvelles règles si mon site est consulté sur un écran de tablette */
 
-@media screen and (min-width: 426px) {
-
-}
+@media screen and (min-width: 426px) {}
 
 /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 
 @media screen and (min-width: 1024px) {
   .major {
-    padding: 1rem 0 1rem 0;
+    padding: 0;
   }
 
   .menu {
-    width: 94%;
-    margin-right: 3%;
-    margin-left: 3%;
+    width: 95%;
+    margin-left: 1.8%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .menu__start {
+    width: 30%;
+  }
+.menu__main {
+  width: 30%;
+}
+
+.menu__dessert {
+  width: 30%;
+}
+  .menu__card {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    height: auto;
+    border-radius: 1rem;
+    @include flex(row, space-between, center);
+    flex-wrap: nowrap;
+    @include box-shadow;
   }
 
   .btn__order {

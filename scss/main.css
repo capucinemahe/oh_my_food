@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .footer {
   width: 95%;
   background-color: #282828;
@@ -135,8 +136,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   padding: 1rem 0 1rem 0;
 }
 
@@ -190,8 +189,8 @@ a {
 .explore__button {
   border-radius: 2.5rem;
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   color: white;
   margin: auto;
   text-align: center;
@@ -239,7 +238,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 
 .function__card {
@@ -252,14 +250,14 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   background-color: #f4f4f4;
   border-radius: 1.5rem;
   -webkit-box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
@@ -347,28 +345,32 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* nouvelles règles si mon site est consulté sur un écran de tablette */
+  /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 }
 
-.underphoto__text {
+.underphoto .underphoto__text {
   padding-left: 1rem;
 }
 
-.underphoto__text h3 {
+.underphoto .underphoto__text h3 {
   font-size: 1.1rem;
   margin-top: 0.6rem;
 }
 
-.underphoto__text p {
+.underphoto .underphoto__text p {
   font-weight: 100;
   margin-top: -0.8rem;
 }
 
-.underphoto i {
+.underphoto .underphoto i {
   font-size: 1.7rem;
-  padding: 0.8rem 1.3rem 0 0;
 }
 
-.card__new {
+.underphoto .card__new {
   width: 5rem;
   height: 1.9rem;
   background-color: #99E2D0;
@@ -378,65 +380,66 @@ a {
   line-height: 1.9rem;
   border-radius: 0.3rem;
   position: absolute;
-  bottom: 80%;
-  right: 8%;
+  top: 4rem;
 }
 
-/* nouvelles règles si mon site est consulté sur un écran de tablette */
 @media screen and (min-width: 426px) {
-  .function {
+  .underphoto .function {
     width: 100%;
     padding-left: 0;
   }
-  .function h2 {
+  .underphoto .function h2 {
     margin: auto;
+    text-align: center;
   }
-  .function__cards {
+  .underphoto .function__cards {
     margin: auto;
   }
 }
 
-/* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 @media screen and (min-width: 1024px) {
-  .function {
-    width: 97%;
-    height: auto;
+  .underphoto .function {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding-left: 3%;
   }
-  .function h2 {
+  .underphoto .function h2 {
     padding: 2rem;
   }
-  .function__cards {
+  .underphoto .function__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     width: 98%;
     margin-right: 2%;
     padding-bottom: 3rem;
   }
-  .function__card {
+  .underphoto .function__card {
     margin: 0 0.5rem 0 0;
   }
-  .restaurants {
+  .underphoto .restaurants {
     padding-top: 1.3rem;
   }
-  .restaurants h2 {
+  .underphoto .restaurants h2 {
     text-align: center;
     padding: 0;
   }
-  .restaurants__labels {
+  .underphoto .restaurants__labels {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -449,7 +452,7 @@ a {
     width: 100%;
     padding-left: 0%;
   }
-  .restaurant__card {
+  .underphoto .restaurant__card {
     width: 45%;
     margin: 1rem;
   }
@@ -531,16 +534,14 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding-left: 1rem;
 }
 
@@ -551,6 +552,7 @@ a {
 .header__menu__title i {
   font-size: 1.5rem;
   padding-right: 2rem;
+  position: relative;
 }
 
 .major {
@@ -591,16 +593,14 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
           box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
 }
@@ -621,15 +621,17 @@ a {
 
 .menu__card__title {
   font-size: 1.1rem;
-  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__card__description {
   font-weight: 100;
   font-size: 0.85rem;
-  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__card__price {
@@ -640,8 +642,8 @@ a {
 .btn__order {
   border-radius: 2.5rem;
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   color: white;
   margin: auto;
   text-align: center;
@@ -656,12 +658,11 @@ a {
 /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 @media screen and (min-width: 1024px) {
   .major {
-    padding: 1rem 0 1rem 0;
+    padding: 0;
   }
   .menu {
-    width: 94%;
-    margin-right: 3%;
-    margin-left: 3%;
+    width: 95%;
+    margin-left: 1.8%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -672,6 +673,41 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .menu__start {
+    width: 30%;
+  }
+  .menu__main {
+    width: 30%;
+  }
+  .menu__dessert {
+    width: 30%;
+  }
+  .menu__card {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    height: auto;
+    border-radius: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
+            box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
   }
   .btn__order {
     background-color: #f4f4f4;
