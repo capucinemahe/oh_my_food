@@ -74,16 +74,48 @@ a {
     display: flex;
     flex-direction: column;
     padding: 1rem 0 2rem 5%;
+}
 
-    h2 {
-        font-size: 1.3rem;
-        font-weight: 500;
-        padding-bottom: 0.5rem;
+@media screen and (min-width: 426px) {
+    .function {
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+        align-content: center;
+
+        .h2 {
+            margin: auto;
+            align-items: center;
+            align-content: center;
+        }
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .function {
+        align-items: center;
+        align-content: center;
+    }
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+}
+
+
 .function__cards {
     @include flex(column, space-between, center);
+}
+
+@media screen and (min-width: 1024px) {
+    .function__cards {
+        @include flex(row, space-around, center);
+        flex-wrap: nowrap;
+        width: 98%;
+        margin-right: 2%;
+    }
 }
 
 .function__card {
@@ -141,6 +173,17 @@ a {
     padding-left: 1%;
 }
 
+@media screen and (min-width: 1024px) {
+
+    .restaurants__labels {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 0%;
+    }
+}
+
 .restaurant__card {
     background-color: white;
     border-radius: 1.25rem;
@@ -149,6 +192,31 @@ a {
     border-radius: 1.6rem;
     margin: 0 0 1rem 0.8rem;
     position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .restaurant__card {
+        width: 45%;
+        margin: 1rem;
+    }
+}
+
+.card__new {
+    width: 5rem;
+    height: 1.9rem;
+    background-color: $mint;
+    color: rgb(21, 119, 83);
+    font-size: 0.9rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    top: 1.3rem;
+    right: 1.3rem;
+
+    p {
+        margin-top: 0.5rem;
+    }
 }
 
 .restaurant__photo {
@@ -179,84 +247,5 @@ a {
 
     .underphoto i {
         font-size: 1.7rem;
-    }
-
-    .card__new {
-        width: 5rem;
-        height: 1.9rem;
-        background-color: $mint;
-        color: rgb(21, 119, 83);
-        font-size: 0.9rem;
-        text-align: center;
-        line-height: 1.9rem;
-        border-radius: 0.3rem;
-        position: absolute;
-        top: 4rem;
-    }
-
-    /* nouvelles règles si mon site est consulté sur un écran de tablette */
-
-    @media screen and (min-width: 426px) {
-        .function {
-            width: 100%;
-            padding-left: 0;
-
-            h2 {
-                margin: auto;
-                text-align: center;
-            }
-        }
-
-        .function__cards {
-            margin: auto;
-        }
-    }
-
-    /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
-
-    @media screen and (min-width: 1024px) {
-        .function {
-            align-items: center;
-            align-content: center;
-            padding-left: 3%;
-
-            h2 {
-                padding: 2rem;
-            }
-        }
-
-        .function__cards {
-            @include flex(row, space-between, center);
-            flex-wrap: nowrap;
-            width: 98%;
-            margin-right: 2%;
-            padding-bottom: 3rem;
-        }
-
-        .function__card {
-            margin: 0 0.5rem 0 0;
-        }
-
-        .restaurants {
-            padding-top: 1.3rem;
-
-            h2 {
-                text-align: center;
-                padding: 0;
-            }
-        }
-
-        .restaurants__labels {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            padding-left: 0%;
-        }
-
-        .restaurant__card {
-            width: 45%;
-            margin: 1rem;
-        }
     }
 }
