@@ -196,7 +196,15 @@ a {
   padding: 1rem 0 1rem 0;
   width: 13.6rem;
   font-weight: 400;
-  margin: auto;
+  border: none;
+  font-size: 1rem;
+}
+
+.explore__button:hover {
+  -webkit-box-shadow: 5px 5px 10px #575757;
+          box-shadow: 5px 5px 10px #575757;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .function {
@@ -311,6 +319,13 @@ h2 {
   cursor: pointer;
   position: relative;
   padding-left: 1rem;
+}
+
+.function_card:hover {
+  background-color: #efe2fa;
+  -webkit-box-shadow: 5px 5px 10px #9A9C9C;
+          box-shadow: 5px 5px 10px #9A9C9C;
+  cursor: pointer;
 }
 
 .number {

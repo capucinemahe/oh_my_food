@@ -116,7 +116,6 @@ a {
   text-align: center;
   padding-bottom: 3rem;
 }
-
 .research__explore h1 {
   font-size: 1.3rem;
   font-weight: 500;
@@ -140,7 +139,14 @@ a {
   padding: 1rem 0 1rem 0;
   width: 13.6rem;
   font-weight: 400;
-  margin: auto;
+  border: none;
+  font-size: 1rem;
+}
+
+.explore__button:hover {
+  box-shadow: 5px 5px 10px #575757;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .function {
@@ -197,6 +203,8 @@ h2 {
 .function__card {
   width: 16rem;
   height: 4.4rem;
+  font-size: 1rem;
+  font-family: "Roboto";
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -209,6 +217,13 @@ h2 {
   cursor: pointer;
   position: relative;
   padding-left: 1rem;
+  border: none;
+}
+
+.function__card:hover {
+  background-color: #efe2fa;
+  box-shadow: 5px 5px 10px #9A9C9C;
+  cursor: pointer;
 }
 
 .number {
@@ -468,6 +483,14 @@ a {
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn__order:hover {
+  box-shadow: 5px 5px 10px #575757;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 /* nouvelles règles si mon site est consulté sur un écran de tablette */
