@@ -1,4 +1,147 @@
 @charset "UTF-8";
+@-webkit-keyframes liking_heart {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation-timing-function: cubic-bezier(0.96, 0.04, 0.99, 0.95);
+            animation-timing-function: cubic-bezier(0.96, 0.04, 0.99, 0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes liking_heart {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  90% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation-timing-function: cubic-bezier(0.96, 0.04, 0.99, 0.95);
+            animation-timing-function: cubic-bezier(0.96, 0.04, 0.99, 0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotate_circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate_circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes progress {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0.5rem);
+            transform: translate(0, 0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes progress {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, 0.5rem);
+            transform: translate(0, 0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.like__heart {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.button_like__heart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.button_like__heart--on {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), color-stop(75%), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, 75%, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.button_like__heart--off {
+  z-index: 1;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.button_like__heart--off:hover {
+  opacity: 0;
+}
+
+.button_like__heart--off:hover + .button_like__heart--on {
+  -webkit-animation: liking_heart 400ms both;
+          animation: liking_heart 400ms both;
+}
+
+.btn__order {
+  border-radius: 2.5rem;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  color: white;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  width: 11rem;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn__order:hover {
+  -webkit-box-shadow: 5px 5px 10px #575757;
+          box-shadow: 5px 5px 10px #575757;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .footer {
   width: 95%;
   background-color: #282828;
@@ -296,6 +439,8 @@ h2 {
 .function__card {
   width: 16rem;
   height: 4.4rem;
+  font-size: 1rem;
+  font-family: 'Roboto';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,9 +464,10 @@ h2 {
   cursor: pointer;
   position: relative;
   padding-left: 1rem;
+  border: none;
 }
 
-.function_card:hover {
+.function__card:hover {
   background-color: #efe2fa;
   -webkit-box-shadow: 5px 5px 10px #9A9C9C;
           box-shadow: 5px 5px 10px #9A9C9C;
@@ -452,22 +598,22 @@ h2 {
           align-items: center;
 }
 
-.underphoto .underphoto__text {
+.underphoto__text {
   padding-left: 1rem;
 }
 
 .underphoto .underphoto__text h3 {
-  font-size: 1.1rem;
-  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
 }
 
-.underphoto .underphoto__text p {
+.underphoto .district {
   font-weight: 100;
   margin-top: -0.8rem;
 }
 
-.underphoto .underphoto i {
-  font-size: 1.7rem;
+.underphoto .like__heart i {
+  padding-right: 1rem;
 }
 
 body {
@@ -529,7 +675,7 @@ a {
 
 .header__menu__picture img {
   width: 100%;
-  height: auto;
+  height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -538,7 +684,7 @@ a {
   font-family: "Shrikhand";
   border-radius: 1.6rem 1.6rem 0 0;
   background-color: #f4f4f4;
-  margin-top: -10%;
+  margin-top: -5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,6 +698,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   padding-left: 1rem;
@@ -561,10 +709,8 @@ a {
   font-size: 1.5rem;
 }
 
-.header__menu__title i {
-  font-size: 1.5rem;
-  padding-right: 2rem;
-  position: relative;
+.like__heart i {
+  padding: 2rem 2rem 0 0;
 }
 
 .major {
@@ -577,7 +723,7 @@ a {
           flex-direction: column;
   background-color: #f4f4f4;
   position: relative;
-  margin-top: -2%;
+  margin-top: -1%;
 }
 
 .menu__title {
@@ -616,6 +762,40 @@ a {
       flex-wrap: nowrap;
   -webkit-box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
           box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.menu__card:nth-child(2) {
+  opacity: 0;
+  -webkit-animation: progress 1s 0.1s forwards;
+          animation: progress 1s 0.1s forwards;
+}
+
+.menu__card:nth-child(3) {
+  opacity: 0;
+  -webkit-animation: progress 1s 0.3s forwards;
+          animation: progress 1s 0.3s forwards;
+}
+
+.menu__card:nth-child(4) {
+  opacity: 0;
+  -webkit-animation: progress 1s 0.5s forwards;
+          animation: progress 1s 0.5s forwards;
+}
+
+.menu__card:hover .menu__card__check {
+  width: 6rem;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
+}
+
+.menu__card:hover .menu__card__price {
+  margin-right: 7rem;
+  -webkit-transition: margin-right 0.7s;
+  transition: margin-right 0.7s;
 }
 
 .menu__card__text {
@@ -630,6 +810,9 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   line-height: 1.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__card__title {
@@ -650,21 +833,49 @@ a {
 .menu__card__price {
   padding-top: 1.6rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 2%;
+  -webkit-transition: margin-right 0.7s;
+  transition: margin-right 0.7s;
 }
 
-.btn__order {
-  border-radius: 2.5rem;
-  cursor: pointer;
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+.menu__card__check {
+  background-color: #99E2D0;
   color: white;
-  margin: auto;
+  width: 0;
+  height: 100%;
+  font-size: 2rem;
   text-align: center;
-  padding: 1rem 0 1rem 0;
-  width: 11rem;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__card__check__circle {
+  -webkit-transform: rotate(0turn);
+          transform: rotate(0turn);
+}
+
+.menu__card:hover .menu__card__check__circle {
+  -webkit-animation: rotate_circle 0.75s;
+          animation: rotate_circle 0.75s;
 }
 
 /* nouvelles règles si mon site est consulté sur un écran de tablette */
@@ -672,6 +883,7 @@ a {
 @media screen and (min-width: 1024px) {
   .major {
     padding: 0;
+    margin-top: 0;
   }
   .menu {
     width: 95%;

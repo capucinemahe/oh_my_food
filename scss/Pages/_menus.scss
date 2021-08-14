@@ -44,7 +44,7 @@ a {
 
 .header__menu__picture img {
   width: 100%;
-  height: auto;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -52,8 +52,9 @@ a {
   font-family: "Shrikhand";
   border-radius: 1.6rem 1.6rem 0 0;
   background-color: $fond-lightgrey;
-  margin-top: -10%;
+  margin-top: -5%;
   @include flex(row, space-between, center);
+  align-content: center;
   flex-wrap: nowrap;
   padding-left: 1rem;
 
@@ -62,10 +63,8 @@ a {
   }
 }
 
-.header__menu__title i {
-  font-size: 1.5rem;
-  padding-right: 2rem;
-  position: relative;
+.like__heart i {
+  padding: 2rem 2rem 0 0;
 }
 
 .major {
@@ -73,7 +72,7 @@ a {
   flex-direction: column;
   background-color: $fond-lightgrey;
   position: relative;
-  margin-top: -2%;
+  margin-top: -1%;
 }
 
 .menu__title {
@@ -95,21 +94,50 @@ a {
   padding: 0.5rem;
   height: 4.25rem;
   border-radius: 1rem;
-  @include flex(row,space-between,center);
- flex-wrap: nowrap;
+  @include flex(row, space-between, center);
+  flex-wrap: nowrap;
   @include box-shadow;
-}
-
-.menu__card__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  line-height: 1.7rem;
-}
-
-.menu__card__title {
-  font-size: 1.1rem;
   @include text-ajust;
+  position: relative;
+
+  &:nth-child(2) {
+    opacity: 0;
+    animation: progress 1s 0.1s forwards;
+  }
+  &:nth-child(3) {
+    opacity: 0;
+    animation: progress 1s 0.3s forwards;
+  }
+  &:nth-child(4) {
+    opacity: 0;
+    animation: progress 1s 0.5s forwards;
+  }
+
+
+
+  &:hover .menu__card__check {
+    width: 6rem;
+    transition: width 0.7s;
+  }
+
+  &:hover .menu__card__price {
+    margin-right: 7rem;
+    transition: margin-right 0.7s;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 1.7rem;
+    @include text-ajust;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    @include text-ajust;
+  }
+
 }
 
 .menu__card__description {
@@ -121,23 +149,34 @@ a {
 .menu__card__price {
   padding-top: 1.6rem;
   font-weight: bold;
+  @include text-ajust;
+  margin-right: 2%;
+  transition: margin-right 0.7s;
 }
 
-.btn__order {
-  @include button;
-  width: 11rem;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border: none;
-  font-size: 1rem;
+.menu__card__check {
+  background-color: $mint;
+  color: white;
+  width: 0;
+  height: 100%;
+  font-size: 2rem;
+  text-align: center;
+  transition: width 0.7s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include flex(column, center, center)
 }
 
-.btn__order:hover {
-  box-shadow: 5px 5px 10px #575757;
-  opacity: 0.7;
-  cursor: pointer;
+.menu__card__check__circle {
+  transform: rotate(0turn);
 }
+
+.menu__card:hover .menu__card__check__circle {
+  animation: rotate_circle 0.75s;
+}
+
+
 
 /* nouvelles règles si mon site est consulté sur un écran de tablette */
 
@@ -148,6 +187,7 @@ a {
 @media screen and (min-width: 1024px) {
   .major {
     padding: 0;
+    margin-top: 0;
   }
 
   .menu {
@@ -161,13 +201,15 @@ a {
   .menu__start {
     width: 30%;
   }
-.menu__main {
-  width: 30%;
-}
 
-.menu__dessert {
-  width: 30%;
-}
+  .menu__main {
+    width: 30%;
+  }
+
+  .menu__dessert {
+    width: 30%;
+  }
+
   .menu__card {
     width: 100%;
     margin-right: auto;
