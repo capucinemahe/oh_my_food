@@ -50,13 +50,11 @@ a {
 
 .header__menu__title {
   font-family: "Shrikhand";
-  border-radius: 1.6rem 1.6rem 0 0;
+  border-radius: 1.5rem 1.6rem 0 0;
   background-color: $fond-lightgrey;
-  margin-top: -5%;
   @include flex(row, space-between, center);
-  align-content: center;
-  flex-wrap: nowrap;
   padding-left: 1rem;
+  transform: translate(0, -40%);
 
   h1 {
     font-size: 1.5rem;
@@ -64,7 +62,8 @@ a {
 }
 
 .like__heart i {
-  padding: 2rem 2rem 0 0;
+  padding: 2rem 1rem 0 0;
+  margin-bottom: -0.7rem;
 }
 
 .major {
@@ -72,7 +71,6 @@ a {
   flex-direction: column;
   background-color: $fond-lightgrey;
   position: relative;
-  margin-top: -1%;
 }
 
 .menu__title {
@@ -87,12 +85,10 @@ a {
 
 .menu__card {
   background-color: white;
-  width: 90%;
-  margin-right: 3%;
-  margin-left: 3%;
+  width: 88%;
+  margin-left: 4%;
   margin-top: 1rem;
   padding: 0.5rem;
-  height: 4.25rem;
   border-radius: 1rem;
   @include flex(row, space-between, center);
   flex-wrap: nowrap;
@@ -104,24 +100,30 @@ a {
     opacity: 0;
     animation: progress 1s 0.1s forwards;
   }
+
   &:nth-child(3) {
     opacity: 0;
     animation: progress 1s 0.3s forwards;
   }
+
   &:nth-child(4) {
     opacity: 0;
     animation: progress 1s 0.5s forwards;
   }
 
-
+  &:nth-child(5) {
+    opacity: 0;
+    animation: progress 1s 0.7s forwards;
+  }
+  
 
   &:hover .menu__card__check {
-    width: 6rem;
+    width: 4rem;
     transition: width 0.7s;
   }
 
   &:hover .menu__card__price {
-    margin-right: 7rem;
+    margin-right: 4rem;
     transition: margin-right 0.7s;
   }
 
@@ -137,7 +139,6 @@ a {
     font-size: 1.1rem;
     @include text-ajust;
   }
-
 }
 
 .menu__card__description {
@@ -149,7 +150,6 @@ a {
 .menu__card__price {
   padding-top: 1.6rem;
   font-weight: bold;
-  @include text-ajust;
   margin-right: 2%;
   transition: margin-right 0.7s;
 }
@@ -165,11 +165,12 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  @include flex(column, center, center)
+  @include flex(column, center, center);
 }
 
 .menu__card__check__circle {
   transform: rotate(0turn);
+  font-size: 1.5rem;
 }
 
 .menu__card:hover .menu__card__check__circle {
@@ -187,7 +188,7 @@ a {
 @media screen and (min-width: 1024px) {
   .major {
     padding: 0;
-    margin-top: 0;
+    margin-top: -2%;
   }
 
   .menu {
@@ -216,7 +217,6 @@ a {
     margin-left: auto;
     margin-top: 1rem;
     padding: 0.5rem;
-    height: auto;
     border-radius: 1rem;
     @include flex(row, space-between, center);
     flex-wrap: nowrap;
