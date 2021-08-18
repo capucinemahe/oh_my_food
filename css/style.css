@@ -1,8 +1,8 @@
-@charset "UTF-8";
 @keyframes disparition_loader {
   0% {
     opacity: 1;
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    display: block;
   }
   99% {
     opacity: 1;
@@ -10,25 +10,27 @@
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 @keyframes load {
   0% {
     opacity: 1;
+    display: block;
+  }
+  50% {
+    opacity: 0.99;
   }
   100% {
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(5px);
     letter-spacing: 5px;
+    display: none;
   }
 }
 @keyframes liking_heart {
   0% {
     transform: scale(0);
-  }
-  90% {
-    transform: scale(1.2);
-    animation-timing-function: cubic-bezier(0.96, 0.04, 0.99, 0.95);
   }
   100% {
     transform: scale(1);
@@ -52,8 +54,28 @@
     transform: translate(0, 0);
   }
 }
+.button__explore {
+  border-radius: 2.5rem;
+  cursor: pointer;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  color: white;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  width: 13.6rem;
+  font-weight: 400;
+  border: none;
+  font-size: 1rem;
+}
+.button__explore:hover {
+  box-shadow: 5px 5px 10px #575757;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .like__heart {
-  font-size: 1.5rem;
+  font-weight: 100;
+  font-size: 2rem;
   position: relative;
 }
 
@@ -63,25 +85,27 @@
   right: 0;
 }
 .button_like__heart--on {
-  background: linear-gradient(to right bottom, #FF79DA, 75%, #9356DC);
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: all 400ms ease-in-out;
+  transition: all 400ms;
   transform: scale(0);
 }
 .button_like__heart--off {
   z-index: 1;
   transition: all 400ms ease-in-out;
 }
-.button_like__heart--off:hover {
+
+.button_like__heart:hover {
   opacity: 0;
 }
+
 .button_like__heart--off:hover + .button_like__heart--on {
   animation: liking_heart 400ms both;
 }
 
-.btn__order {
+.button__order {
   border-radius: 2.5rem;
   cursor: pointer;
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
@@ -97,7 +121,7 @@
   font-size: 1rem;
 }
 
-.btn__order:hover {
+.button__order:hover {
   box-shadow: 5px 5px 10px #575757;
   opacity: 0.7;
   cursor: pointer;
@@ -112,15 +136,15 @@
 }
 
 .spinner {
-  display: block;
   text-align: center;
   font-family: "Shrikhand";
-  font-size: 5rem;
-  color: blueviolet;
+  font-size: 4rem;
+  color: #99E2D0;
   position: absolute;
   top: 40%;
   left: 40%;
-  animation: load 3s alternate forwards;
+  animation: load 3s forwards;
+  z-index: 1;
 }
 
 .footer {
@@ -130,12 +154,20 @@
   flex-direction: column;
   padding: 1rem 0 2rem 4%;
 }
-
 .footer a {
   color: white;
   padding-top: 0.5rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+}
 .footer__title {
   font-family: "Shrikhand";
   color: white;
@@ -143,11 +175,24 @@
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__title {
+    font-size: 2rem;
+    padding-left: 6rem;
+    padding-right: 5rem;
+    padding-top: 2%;
+  }
+}
 .footer__list__icones {
   display: flex;
   flex-direction: column;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__list__icones {
+    padding: 2rem 3rem 2rem 5rem;
+  }
+}
 .footer__list__noicones a {
   display: flex;
   flex-direction: column;
@@ -157,29 +202,7 @@
   padding-right: 1rem;
 }
 
-/* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
 @media screen and (min-width: 1024px) {
-  .footer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0;
-  }
-
-  .footer__title {
-    font-size: 2rem;
-    padding-left: 6rem;
-    padding-right: 5rem;
-    padding-top: 2%;
-  }
-
-  .footer__list__icones {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 3rem 2rem 5rem;
-  }
-
   .footer__list__noicones {
     display: flex;
     flex-direction: column;
@@ -206,7 +229,6 @@ a {
   flex-direction: column;
   margin: auto;
 }
-
 .research__city {
   width: 100%;
   background-color: #e5e5e5;
@@ -251,25 +273,6 @@ a {
   font-size: 1.1rem;
   font-weight: 200;
   padding: 0 1rem 1rem 1rem;
-}
-
-.explore__button {
-  border-radius: 2.5rem;
-  cursor: pointer;
-  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  color: white;
-  margin: auto;
-  text-align: center;
-  padding: 1rem 0 1rem 0;
-  width: 13.6rem;
-  font-weight: 400;
-  border: none;
-  font-size: 1rem;
-}
-.explore__button:hover {
-  box-shadow: 5px 5px 10px #575757;
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .function {
@@ -515,7 +518,6 @@ a {
 .header__menu {
   width: 100%;
 }
-
 .header__menu__picture img {
   width: 100%;
   object-fit: cover;
@@ -610,30 +612,30 @@ a {
 }
 .menu__card:nth-child(2) {
   opacity: 0;
-  animation: progress 1s 0.1s forwards;
+  animation: progress 1s 100ms forwards;
 }
 .menu__card:nth-child(3) {
   opacity: 0;
-  animation: progress 1s 0.3s forwards;
+  animation: progress 1s 300ms forwards;
 }
 .menu__card:nth-child(4) {
   opacity: 0;
-  animation: progress 1s 0.5s forwards;
+  animation: progress 1s 500ms forwards;
 }
 .menu__card:nth-child(5) {
   opacity: 0;
-  animation: progress 1s 0.7s forwards;
+  animation: progress 1s 700ms forwards;
 }
 .menu__card:hover .menu__card__check {
   width: 4rem;
-  transition: width 0.7s;
+  transition: width 700ms;
 }
 .menu__card:hover .menu__card__price {
   margin-right: 4rem;
-  transition: margin-right 0.7s;
+  transition: margin-right 700ms;
 }
 .menu__card:hover .menu__card__check__circle {
-  animation: rotate_circle 0.75s;
+  animation: rotate_circle 750ms;
 }
 
 .menu__card__text {
@@ -665,7 +667,7 @@ a {
   padding-top: 1.5rem;
   font-weight: bold;
   margin-right: 2%;
-  transition: margin-right 0.7s;
+  transition: margin-right 400ms;
 }
 
 .menu__card__check {
@@ -675,7 +677,7 @@ a {
   height: 100%;
   font-size: 2rem;
   text-align: center;
-  transition: width 0.7s;
+  transition: width 400ms;
   position: absolute;
   top: 0;
   right: 0;
@@ -684,9 +686,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 .menu__card__check__circle {
-  transform: rotate(0turn);
   font-size: 1.5rem;
 }
 

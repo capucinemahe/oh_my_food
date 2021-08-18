@@ -1,36 +1,17 @@
+.footer {
+  width: 96%;
+  background-color: $fond-darkgrey;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 2rem 4%;
 
-  .footer {
-    width: 96%;
-    background-color: $fond-darkgrey;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 2rem 4%;
-  }
-  .footer a {
+  a {
     color: white;
     padding-top: 0.5rem;
   }
-  .footer__title {
-    font-family: "Shrikhand";
-    color: white;
-    font-size: 1.3rem;
-    padding-bottom: 1rem;
-  }
-  .footer__list__icones {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__list__noicones a {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer__list__icones i {
-    padding-right: 1rem;
-  }
+}
 
-    /* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
-  
-    @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 
   .footer {
     width: 100%;
@@ -39,18 +20,48 @@
     align-items: center;
     padding: 0;
   }
+}
+
+.footer__title {
+  font-family: "Shrikhand";
+  color: white;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
   .footer__title {
     font-size: 2rem;
     padding-left: 6rem;
     padding-right: 5rem;
     padding-top: 2%;
   }
+}
+
+
+.footer__list__icones {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
 
   .footer__list__icones {
-    display: flex;
-    flex-direction: column;
     padding: 2rem 3rem 2rem 5rem;
   }
+}
+
+
+.footer__list__noicones a {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__list__icones i {
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
 
   .footer__list__noicones {
     display: flex;

@@ -17,16 +17,16 @@ a {
     display: flex;
     flex-direction: column;
     margin: auto;
-}
 
-.research__city {
-    width: 100%;
-    background-color: rgb(229, 229, 229);
-    @include flex(row, center, center);
-    padding: 1rem 0 1rem 0;
+    &__city {
+        width: 100%;
+        background-color: rgb(229, 229, 229);
+        @include flex(row, center, center);
+        padding: 1rem 0 1rem 0;
 
-    i {
-        padding-right: 0.75rem;
+        i {
+            padding-right: 0.75rem;
+        }
     }
 }
 
@@ -59,21 +59,6 @@ a {
     font-size: 1.1rem;
     font-weight: 200;
     padding: 0 1rem 1rem 1rem;
-}
-
-
-.explore__button {
-    @include button;
-    width: 13.6rem;
-    font-weight: 400;
-    border: none;
-    font-size: 1rem;
-
-    &:hover {
-        box-shadow: 5px 5px 10px #575757;
-        opacity: 0.7;
-        cursor: pointer;
-    }
 }
 
 .function {

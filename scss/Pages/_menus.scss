@@ -38,11 +38,11 @@ a {
 
 .header__menu {
   width: 100%;
-}
 
-.header__menu__picture img {
-  width: 100%;
-  object-fit: cover;
+  &__picture img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 426px) {
@@ -50,7 +50,6 @@ a {
     height: 17rem;
   }
 }
-
 
 .header__menu__title {
   font-family: "Shrikhand";
@@ -132,36 +131,36 @@ a {
 
   &:nth-child(2) {
     opacity: 0;
-    animation: progress 1s 0.1s forwards;
+    animation: progress 1s 100ms forwards;
   }
 
   &:nth-child(3) {
     opacity: 0;
-    animation: progress 1s 0.3s forwards;
+    animation: progress 1s 300ms forwards;
   }
 
   &:nth-child(4) {
     opacity: 0;
-    animation: progress 1s 0.5s forwards;
+    animation: progress 1s 500ms forwards;
   }
 
   &:nth-child(5) {
     opacity: 0;
-    animation: progress 1s 0.7s forwards;
+    animation: progress 1s 700ms forwards;
   }
 
   &:hover .menu__card__check {
     width: 4rem;
-    transition: width 0.7s;
+    transition: width 700ms;
   }
 
   &:hover .menu__card__price {
     margin-right: 4rem;
-    transition: margin-right 0.7s;
+    transition: margin-right 700ms;
   }
 
   &:hover .menu__card__check__circle {
-    animation: rotate_circle 0.75s;
+    animation: rotate_circle 750ms;
   }
 }
 
@@ -188,7 +187,7 @@ a {
   padding-top: 1.5rem;
   font-weight: bold;
   margin-right: 2%;
-  transition: margin-right 0.7s;
+  transition: margin-right 400ms;
 }
 
 .menu__card__check {
@@ -198,14 +197,13 @@ a {
   height: 100%;
   font-size: 2rem;
   text-align: center;
-  transition: width 0.7s;
+  transition: width 400ms;
   position: absolute;
   top: 0;
   right: 0;
   @include flex(column, center, center);
-}
 
-.menu__card__check__circle {
-  transform: rotate(0turn);
-  font-size: 1.5rem;
+  &__circle {
+    font-size: 1.5rem;
+  }
 }

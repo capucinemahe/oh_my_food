@@ -7,13 +7,13 @@
   }
   
   .spinner {
-    display: block;
     text-align: center;
     font-family: "Shrikhand";
-    font-size: 5rem;
-    color: blueviolet;
+    font-size: 4rem;
+    color: $mint;
     position: absolute;
     top: 40%;
     left: 40%;
-    animation: load 3s alternate forwards;
+    animation: load 3s forwards;
+    z-index:1;
   }
