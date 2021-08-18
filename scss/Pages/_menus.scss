@@ -38,14 +38,19 @@ a {
 
 .header__menu {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .header__menu__picture img {
   width: 100%;
   object-fit: cover;
 }
+
+@media screen and (min-width: 426px) {
+  .header__menu__picture img {
+    height: 17rem;
+  }
+}
+
 
 .header__menu__title {
   font-family: "Shrikhand";
@@ -70,6 +75,17 @@ a {
   flex-direction: column;
   background-color: $fond-lightgrey;
   position: relative;
+  margin-top: -3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 98%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .menu__title {
@@ -82,6 +98,20 @@ a {
   padding-bottom: 0.5rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu__start {
+    width: 33%;
+  }
+
+  .menu__main {
+    width: 33%;
+  }
+
+  .menu__dessert {
+    width: 33%;
+  }
+}
+
 .menu__card {
   background-color: white;
   width: 88%;
@@ -90,10 +120,15 @@ a {
   padding: 0.5rem;
   border-radius: 1rem;
   @include flex(row, space-between, center);
-  flex-wrap: nowrap;
   @include box-shadow;
   @include text-ajust;
   position: relative;
+
+  @media screen and (min-width: 1024px) {
+    .menu__card {
+      margin-left: 0;
+    }
+  }
 
   &:nth-child(2) {
     opacity: 0;
@@ -125,18 +160,22 @@ a {
     transition: margin-right 0.7s;
   }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    line-height: 1.7rem;
-    @include text-ajust;
+  &:hover .menu__card__check__circle {
+    animation: rotate_circle 0.75s;
   }
+}
 
-  &__title {
-    font-size: 1.1rem;
-    @include text-ajust;
-  }
+.menu__card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 1.7rem;
+  @include text-ajust;
+}
+
+.menu__card__title {
+  font-size: 1.1rem;
+  @include text-ajust;
 }
 
 .menu__card__description {
@@ -169,58 +208,4 @@ a {
 .menu__card__check__circle {
   transform: rotate(0turn);
   font-size: 1.5rem;
-}
-
-.menu__card:hover .menu__card__check__circle {
-  animation: rotate_circle 0.75s;
-}
-
-
-
-/* nouvelles règles si mon site est consulté sur un écran de tablette */
-
-@media screen and (min-width: 426px) {}
-
-/* nouvelles règles si mon site est consulté sur un écran d'ordinateur */
-
-@media screen and (min-width: 1024px) {
-  .major {
-    padding: 0;
-  }
-
-  .menu {
-    width: 95%;
-    margin-left: 1.8%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .menu__start {
-    width: 30%;
-  }
-
-  .menu__main {
-    width: 30%;
-  }
-
-  .menu__dessert {
-    width: 30%;
-  }
-
-  .menu__card {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 1rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    @include flex(row, space-between, center);
-    flex-wrap: nowrap;
-    @include box-shadow;
-  }
-
-  .btn__order {
-    background-color: rgb(244, 244, 244);
-  }
 }

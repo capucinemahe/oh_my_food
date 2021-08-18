@@ -1,3 +1,34 @@
+@keyframes load {
+    0% {
+        z-index: 10000;
+        opacity: 1;
+        background-color: cadetblue;
+    }
+
+    100% {
+        z-index: 0;
+        opacity: 0;
+        filter: blur(5px);
+        letter-spacing: 3px;
+    }
+}
+
+@keyframes disparition_loader {
+    0% {
+        opacity: 1;
+        background-color: cadetblue;
+    }
+
+    99% {
+        opacity: 1;
+        background-color: cadetblue;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes liking_heart {
     0% {
         transform: scale(0);
@@ -17,7 +48,7 @@
     0% {
         transform: rotate(0deg);
     }
-    
+
     100% {
         transform: rotate(360deg);
     }
@@ -34,5 +65,4 @@
         opacity: 1;
         transform: translate(0, 0);
     }
-} 
-
+}
