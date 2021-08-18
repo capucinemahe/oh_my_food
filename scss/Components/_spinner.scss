@@ -3,15 +3,17 @@
     height: 100%;
     position: absolute;
     animation: disparition_loader 3s forwards;
+    z-index: 1;
   }
   
   .spinner {
     display: block;
     text-align: center;
-    font-family: helvetica;
+    font-family: "Shrikhand";
+    font-size: 5rem;
     color: blueviolet;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
     animation: load 3s alternate forwards;
   }
