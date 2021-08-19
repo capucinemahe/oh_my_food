@@ -2,15 +2,17 @@
   0% {
     opacity: 1;
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-    display: block;
+    z-index: 1;
   }
   99% {
     opacity: 1;
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    z-index: 1;
   }
   100% {
     opacity: 0;
     display: none;
+    z-index: -2;
   }
 }
 @keyframes load {
@@ -138,13 +140,28 @@
 .spinner {
   text-align: center;
   font-family: "Shrikhand";
-  font-size: 4rem;
+  font-size: 2rem;
   color: #99E2D0;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 25%;
   animation: load 3s forwards;
   z-index: 1;
+}
+@media screen and (min-width: 426px) {
+  .spinner {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .spinner {
+    font-size: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
 }
 
 .footer {
@@ -158,7 +175,6 @@
   color: white;
   padding-top: 0.5rem;
 }
-
 @media screen and (min-width: 1024px) {
   .footer {
     width: 100%;
@@ -168,13 +184,13 @@
     padding: 0;
   }
 }
+
 .footer__title {
   font-family: "Shrikhand";
   color: white;
   font-size: 1.3rem;
   padding-bottom: 1rem;
 }
-
 @media screen and (min-width: 1024px) {
   .footer__title {
     font-size: 2rem;
@@ -183,16 +199,17 @@
     padding-top: 2%;
   }
 }
+
 .footer__list__icones {
   display: flex;
   flex-direction: column;
 }
-
 @media screen and (min-width: 1024px) {
   .footer__list__icones {
     padding: 2rem 3rem 2rem 5rem;
   }
 }
+
 .footer__list__noicones a {
   display: flex;
   flex-direction: column;
@@ -215,6 +232,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 1500px;
 }
 
 a {
@@ -343,7 +361,6 @@ h2 {
   padding-left: 1rem;
   border: none;
 }
-
 @media screen and (min-width: 426px) {
   .function__card {
     width: 22rem;
@@ -355,6 +372,7 @@ h2 {
     margin: 0 1rem 0 1rem;
   }
 }
+
 .function__card:hover {
   background-color: #efe2fa;
   box-shadow: 5px 5px 10px #9A9C9C;
@@ -394,12 +412,12 @@ h2 {
   font-size: 1.5rem;
   font-weight: 500;
 }
-
 @media screen and (min-width: 1024px) {
   #restaurants {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 426px) {
   .restaurants__labels {
     display: flex;
@@ -425,13 +443,13 @@ h2 {
   position: relative;
   box-shadow: 0.3rem 0.3rem 0.3rem #e6e6e6;
 }
-
 @media screen and (min-width: 1024px) {
   .restaurant__card {
     width: 45%;
     margin: 1rem;
   }
 }
+
 .card__new {
   width: 5rem;
   height: 1.7rem;
@@ -484,7 +502,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 1500px;
 }
 
 a {
@@ -606,7 +624,7 @@ a {
   position: relative;
 }
 @media screen and (min-width: 1024px) {
-  .menu__card .menu__card {
+  .menu__card {
     margin-left: 0;
   }
 }

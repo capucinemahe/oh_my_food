@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 1500px;
 }
 
 a {
@@ -123,10 +123,8 @@ a {
   @include text-ajust;
   position: relative;
 
-  @media screen and (min-width: 1024px) {
-    .menu__card {
-      margin-left: 0;
-    }
+  @include media-min(1024px) {
+    margin-left: 0;
   }
 
   &:nth-child(2) {

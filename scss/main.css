@@ -3,16 +3,18 @@
     opacity: 1;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-    display: block;
+    z-index: 1;
   }
   99% {
     opacity: 1;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    z-index: 1;
   }
   100% {
     opacity: 0;
     display: none;
+    z-index: -2;
   }
 }
 
@@ -21,16 +23,18 @@
     opacity: 1;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-    display: block;
+    z-index: 1;
   }
   99% {
     opacity: 1;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    z-index: 1;
   }
   100% {
     opacity: 0;
     display: none;
+    z-index: -2;
   }
 }
 
@@ -235,14 +239,31 @@
 .spinner {
   text-align: center;
   font-family: "Shrikhand";
-  font-size: 4rem;
+  font-size: 2rem;
   color: #99E2D0;
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 25%;
   -webkit-animation: load 3s forwards;
           animation: load 3s forwards;
   z-index: 1;
+}
+
+@media screen and (min-width: 426px) {
+  .spinner {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .spinner {
+    font-size: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
 }
 
 .footer {
@@ -346,6 +367,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 1500px;
 }
 
 a {
@@ -732,7 +754,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 100%;
+  max-width: 1500px;
 }
 
 a {
@@ -899,7 +921,7 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .menu__card .menu__card {
+  .menu__card {
     margin-left: 0;
   }
 }

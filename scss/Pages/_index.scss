@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 1500px;
 }
 
 a {
@@ -124,17 +125,13 @@ h2 {
     position: relative;
     padding-left: 1rem;
     border: none;
-}
 
-@media screen and (min-width: 426px) {
-    .function__card {
+    @include media-min(426px) {
         width: 22rem;
         margin: 1rem 0 1rem 0;
     }
-}
 
-@media screen and (min-width: 1024px) {
-    .function__card {
+    @include media-min(1024px) {
         margin: 0 1rem 0 1rem;
     }
 }
@@ -178,11 +175,8 @@ h2 {
         font-size: 1.5rem;
         font-weight: 500;
     }
-}
 
-@media screen and (min-width: 1024px) {
-
-    #restaurants {
+    @include media-min(1024px) {
         width: 100%;
     }
 }
@@ -214,14 +208,13 @@ h2 {
     margin: 0 1rem 1rem 1rem;
     position: relative;
     @include box-shadow;
-}
 
-@media screen and (min-width: 1024px) {
-    .restaurant__card {
+    @include media-min(1024px) {
         width: 45%;
         margin: 1rem;
     }
 }
+
 
 .card__new {
     width: 5rem;
