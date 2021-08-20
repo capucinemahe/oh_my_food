@@ -1,28 +1,29 @@
+/* bouton "explorer nos restaurants" sur l'index */
 .button__explore {
   @include button;
   width: 13.6rem;
   font-weight: 400;
   border: none;
   font-size: 1rem;
-
+/* éclaircissement au survol du bouton */
   &:hover {
-      box-shadow: 5px 5px 10px #575757;
-      opacity: 0.7;
-      cursor: pointer;
+    box-shadow: 5px 5px 10px #575757;
+    opacity: 0.7;
+    cursor: pointer;
   }
 }
-
+/* 2 icones coeur */
 .like__heart {
   font-weight: 100;
   font-size: 2rem;
   position: relative;
 }
-
+/* bouton coeur on & off */
 .button_like__heart {
   position: absolute;
   bottom: 0;
   right: 0;
-
+/* état d'apparition du coeur avec fond plein */
   &--on {
     background: linear-gradient(to right bottom, $rose, $violet);
     background-clip: text;
@@ -31,12 +32,13 @@
     transition: all 400ms;
     transform: scale(0);
   }
-
+/* transition du coeur */
   &--off {
     z-index: 1;
     transition: all 400ms ease-in-out;
   }
 }
+
 .button_like__heart:hover {
   opacity: 0;
 }
@@ -44,9 +46,7 @@
 .button_like__heart--off:hover+.button_like__heart--on {
   animation: liking_heart 400ms both;
 }
-
-
-
+/* bouton "commander" page menus */
 .button__order {
   @include button;
   width: 11rem;
@@ -56,7 +56,7 @@
   border: none;
   font-size: 1rem;
 }
-
+/* effet sur ce bouton */
 .button__order:hover {
   box-shadow: 5px 5px 10px #575757;
   opacity: 0.7;

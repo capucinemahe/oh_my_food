@@ -12,6 +12,7 @@ a {
     color: initial;
 }
 
+/* section recherches */
 .research {
     width: 100%;
     height: auto;
@@ -41,6 +42,7 @@ a {
     cursor: text;
 }
 
+/* section explore */
 .research__explore {
     width: 100%;
     height: auto;
@@ -62,12 +64,18 @@ a {
     padding: 0 1rem 1rem 1rem;
 }
 
+/* section fonctionnement */
 .function {
     width: 95%;
     height: auto;
     display: flex;
     flex-direction: column;
     padding: 1rem 0 2rem 5%;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 426px) {
@@ -91,13 +99,7 @@ a {
         align-content: center;
     }
 }
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-
+/* ensemble des 3 vignettes */
 .function__cards {
     @include flex(column, space-between, flex-start);
 }
@@ -109,7 +111,7 @@ h2 {
         width: 96%;
     }
 }
-
+/* chaque vignette */
 .function__card {
     width: 90%;
     height: 4.4rem;
@@ -135,7 +137,7 @@ h2 {
         margin: 0 1rem 0 1rem;
     }
 }
-
+/* effet sur chaque vignette */
 .function__card:hover {
     background-color: #efe2fa;
     box-shadow: 5px 5px 10px #9A9C9C;
@@ -161,7 +163,7 @@ h2 {
     font-size: 1.2rem;
     color: rgb(107, 107, 107);
 }
-
+/* section restaurants */
 #restaurants {
     display: flex;
     flex-direction: column;
@@ -180,7 +182,7 @@ h2 {
         width: 100%;
     }
 }
-
+/* concerne les cartes des 4 restaurants - sans le titre */
 @media screen and (min-width: 426px) {
     .restaurants__labels {
         display: flex;
@@ -199,7 +201,7 @@ h2 {
         justify-content: space-evenly;
     }
 }
-
+/* chaque vignette de restaurant */
 .restaurant__card {
     background-color: white;
     width: 90%;
@@ -215,7 +217,7 @@ h2 {
     }
 }
 
-
+/* petite vignette NOUVEAU */
 .card__new {
     width: 5rem;
     height: 1.7rem;
@@ -232,14 +234,14 @@ h2 {
         font-size: 0.9rem;
     }
 }
-
+ /* img vognette restaurant */
 .restaurant__photo {
     width: 100%;
     height: 10.9rem;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
 }
-
+/* tout ce qui est sous l'img de la vignette */
 .underphoto {
     width: 100%;
     height: 4.7rem;
