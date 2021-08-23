@@ -20,15 +20,16 @@
   z-index: 1;
 
   @include media-min(426px) {
+    font-size: 3rem;
     position: absolute;
     top: 40%;
-    left: 28%;
+    left: 35%;
   }
 
   @include media-min(1024px) {
     font-size: 4rem;
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 35%;
   }
 }
