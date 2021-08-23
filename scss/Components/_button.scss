@@ -5,47 +5,52 @@
   font-weight: 400;
   border: none;
   font-size: 1rem;
-/* éclaircissement au survol du bouton */
+
+  /* éclaircissement au survol du bouton */
   &:hover {
     box-shadow: 5px 5px 10px #575757;
     opacity: 0.7;
     cursor: pointer;
   }
 }
-/* 2 icones coeur */
-.like__heart {
-  font-weight: 100;
-  font-size: 2rem;
+
+.button_like {
+  font-size: 1.5rem;
   position: relative;
-}
-/* bouton coeur on & off */
-.button_like__heart {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-/* état d'apparition du coeur avec fond plein */
-  &--on {
-    background: linear-gradient(to right bottom, $rose, $violet);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: all 400ms;
-    transform: scale(0);
+
+  &__heart {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 2rem;
+
+    &--full {
+      background: linear-gradient(to right bottom, $rose, $violet);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: 0;
+      transition: opacity 800ms;
+    }
+
+    &--empty {
+      opacity: 1;
+      transition: opacity 800ms;
+      /* transition retour du coeur */
+    }
   }
-/* transition du coeur */
-  &--off {
-    z-index: 1;
-    transition: all 400ms ease-in-out;
+
+  &:hover .button_like__heart--full {
+    opacity: 1;
+    transition: opacity 800ms, background-color 800ms;
+  }
+
+  &:hover .button_like__heart--empty {
+    opacity: 0;
+    transition: opacity 800ms;
+    /* transition apparition du coeur */
   }
 }
 
-.button_like__heart:hover {
-  opacity: 0;
-}
-
-.button_like__heart--off:hover+.button_like__heart--on {
-  animation: liking_heart 400ms both;
-}
 /* bouton "commander" page menus */
 .button__order {
   @include button;
@@ -55,10 +60,11 @@
   margin-bottom: 3rem;
   border: none;
   font-size: 1rem;
-}
-/* effet sur ce bouton */
-.button__order:hover {
-  box-shadow: 5px 5px 10px #575757;
-  opacity: 0.7;
-  cursor: pointer;
+
+  /* effet sur ce bouton */
+  &:hover {
+    box-shadow: 5px 5px 10px #575757;
+    opacity: 0.7;
+    cursor: pointer;
+  }
 }

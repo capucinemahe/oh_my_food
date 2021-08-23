@@ -36,16 +36,7 @@
         letter-spacing: 5px;
     }
 }
-/* animation sur le coeur - apparition */
-@keyframes liking_heart {
-    0% {
-        transform: scale(0);
-    }
 
-    100% {
-        transform: scale(1);
-    }
-}
 /* rotation du check menu */
 @keyframes rotate_circle {
     0% {

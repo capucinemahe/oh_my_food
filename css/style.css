@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* mixin simplifier flex */
 /* boutons rose/violet */
-/* mettre un element en position absolute */
 /* ombres */
 /* maitrise de l'overflow */
 /* media queries pour responsive */
@@ -36,15 +35,6 @@
     opacity: 0;
     filter: blur(5px);
     letter-spacing: 5px;
-  }
-}
-/* animation sur le coeur - apparition */
-@keyframes liking_heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 /* rotation du check menu */
@@ -88,40 +78,36 @@
   cursor: pointer;
 }
 
-/* 2 icones coeur */
-.like__heart {
-  font-weight: 100;
-  font-size: 2rem;
+.button_like {
+  font-size: 1.5rem;
   position: relative;
 }
-
-/* bouton coeur on & off */
 .button_like__heart {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  /* état d'apparition du coeur avec fond plein */
-  /* transition du coeur */
+  bottom: -0.5rem;
+  right: 2rem;
 }
-.button_like__heart--on {
+.button_like__heart--full {
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: all 400ms;
-  transform: scale(0);
-}
-.button_like__heart--off {
-  z-index: 1;
-  transition: all 400ms ease-in-out;
-}
-
-.button_like__heart:hover {
   opacity: 0;
+  transition: opacity 800ms;
 }
-
-.button_like__heart--off:hover + .button_like__heart--on {
-  animation: liking_heart 400ms both;
+.button_like__heart--empty {
+  opacity: 1;
+  transition: opacity 800ms;
+  /* transition retour du coeur */
+}
+.button_like:hover .button_like__heart--full {
+  opacity: 1;
+  transition: opacity 800ms, background-color 800ms;
+}
+.button_like:hover .button_like__heart--empty {
+  opacity: 0;
+  transition: opacity 800ms;
+  /* transition apparition du coeur */
 }
 
 /* bouton "commander" page menus */
@@ -139,9 +125,8 @@
   margin-bottom: 3rem;
   border: none;
   font-size: 1rem;
+  /* effet sur ce bouton */
 }
-
-/* effet sur ce bouton */
 .button__order:hover {
   box-shadow: 5px 5px 10px #575757;
   opacity: 0.7;
@@ -152,7 +137,7 @@
 .loadingbox {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   animation: disparition_loader 3s forwards;
   z-index: 1;
 }
@@ -165,7 +150,7 @@
   color: #99E2D0;
   position: absolute;
   top: 40%;
-  left: 25%;
+  left: 23%;
   animation: load 3s forwards;
   z-index: 1;
 }
@@ -173,7 +158,7 @@
   .spinner {
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 28%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -181,7 +166,7 @@
     font-size: 4rem;
     position: absolute;
     top: 40%;
-    left: 40%;
+    left: 30%;
   }
 }
 
@@ -232,14 +217,16 @@
     padding: 2rem 3rem 2rem 5rem;
   }
 }
+.footer__list__icones__ustensils {
+  padding-right: 1rem;
+}
+.footer__list__icones__hands {
+  padding-right: 0.6rem;
+}
 
 .footer__list__noicones a {
   display: flex;
   flex-direction: column;
-}
-
-.footer__list__icones i {
-  padding-right: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -324,7 +311,7 @@ a {
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 1rem 0 2rem 5%;
+  padding: 1rem 0 2rem 3%;
 }
 
 h2 {
@@ -448,7 +435,7 @@ h2 {
   }
 }
 
-/* concerne les cartes des 4 restaurants - sans le titre */
+/* concerne les cartes des 4 restaurants - sans le titre de la section */
 @media screen and (min-width: 426px) {
   .restaurants__labels {
     display: flex;
@@ -499,7 +486,7 @@ h2 {
   font-size: 0.9rem;
 }
 
-/* img vognette restaurant */
+/* img vignette restaurant */
 .restaurant__photo {
   width: 100%;
   height: 10.9rem;
