@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* mixin simplifier flex */
 /* boutons rose/violet */
+/* effet opacité + ombre sur les boutons rose/violet */
 /* ombres */
 /* maitrise de l'overflow */
 /* media queries pour responsive */
@@ -8,25 +9,21 @@
 @keyframes disparition_loader {
   0% {
     opacity: 1;
-    background: linear-gradient(to right bottom, #FF79DA, #9356DC);
     z-index: 1;
   }
   99% {
     opacity: 1;
-    background: linear-gradient(to right bottom, #FF79DA, #9356DC);
     z-index: 1;
   }
   100% {
     opacity: 0;
-    display: none;
     z-index: -2;
   }
 }
 /* typo du loader avec effet blur */
-@keyframes load {
+@keyframes typo_spinner {
   0% {
     opacity: 1;
-    display: block;
   }
   99% {
     opacity: 1;
@@ -66,48 +63,16 @@
   margin: auto;
   text-align: center;
   padding: 1rem 0 1rem 0;
-  width: 13.6rem;
-  font-weight: 400;
   border: none;
   font-size: 1rem;
+  width: 13.6rem;
+  font-weight: 400;
   /* éclaircissement au survol du bouton */
 }
 .button__explore:hover {
   box-shadow: 5px 5px 10px #575757;
   opacity: 0.7;
   cursor: pointer;
-}
-
-.button_like {
-  font-size: 1.5rem;
-  position: relative;
-}
-.button_like__heart {
-  position: absolute;
-  bottom: -0.5rem;
-  right: 2rem;
-}
-.button_like__heart--full {
-  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  opacity: 0;
-  transition: opacity 800ms;
-}
-.button_like__heart--empty {
-  opacity: 1;
-  transition: opacity 800ms;
-  /* transition retour du coeur */
-}
-.button_like:hover .button_like__heart--full {
-  opacity: 1;
-  transition: opacity 800ms, background-color 800ms;
-}
-.button_like:hover .button_like__heart--empty {
-  opacity: 0;
-  transition: opacity 800ms;
-  /* transition apparition du coeur */
 }
 
 /* bouton "commander" page menus */
@@ -119,12 +84,11 @@
   margin: auto;
   text-align: center;
   padding: 1rem 0 1rem 0;
-  width: 11rem;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   border: none;
   font-size: 1rem;
+  width: 11rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   /* effet sur ce bouton */
 }
 .button__order:hover {
@@ -133,10 +97,43 @@
   cursor: pointer;
 }
 
+/* bouton forme de coeur - page index + menus */
+.button_like {
+  font-size: 1.5rem;
+  position: relative;
+}
+.button_like__heart {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 2rem;
+  /* états des deux coeurs avant la transition */
+}
+.button_like__heart--full {
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  /* background-clip: text; */
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 800ms;
+}
+.button_like__heart--empty {
+  opacity: 1;
+  transition: opacity 800ms;
+}
+.button_like:hover .button_like__heart--full {
+  opacity: 1;
+  transition: opacity 800ms, background-color 800ms;
+}
+.button_like:hover .button_like__heart--empty {
+  opacity: 0;
+  transition: opacity 800ms;
+}
+
 /* fond du loader */
 .loadingbox {
   width: 100%;
   height: 100%;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   position: fixed;
   animation: disparition_loader 3s forwards;
   z-index: 1;
@@ -151,7 +148,7 @@
   position: absolute;
   top: 40%;
   left: 23%;
-  animation: load 3s forwards;
+  animation: typo_spinner 3s forwards;
   z-index: 1;
 }
 @media screen and (min-width: 426px) {
@@ -243,7 +240,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 a {
@@ -525,7 +522,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 /* supprime les effets des élements déja cliqués */
@@ -540,14 +537,15 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: relative;
+  align-items: center;
   margin: auto;
+  position: relative;
   /* icone flèche du header*/
 }
 .header i {
   font-size: 1.2rem;
   position: absolute;
-  bottom: 40%;
+  bottom: 30%;
   left: 3%;
 }
 
@@ -610,6 +608,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .menu__title {
@@ -695,6 +694,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
   line-height: 1.7rem;
   white-space: nowrap;
   overflow: hidden;

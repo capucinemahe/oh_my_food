@@ -134,10 +134,10 @@
   margin: auto;
   text-align: center;
   padding: 1rem 0 1rem 0;
-  width: 13.6rem;
-  font-weight: 400;
   border: none;
   font-size: 1rem;
+  width: 13.6rem;
+  font-weight: 400;
   /* éclaircissement au survol du bouton */
 }
 
@@ -148,6 +148,33 @@
   cursor: pointer;
 }
 
+/* bouton "commander" page menus */
+.button__order {
+  border-radius: 2.5rem;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  color: white;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  border: none;
+  font-size: 1rem;
+  width: 11rem;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  /* effet sur ce bouton */
+}
+
+.button__order:hover {
+  -webkit-box-shadow: 5px 5px 10px #575757;
+          box-shadow: 5px 5px 10px #575757;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* bouton forme de coeur - page index + menus */
 .button_like {
   font-size: 1.5rem;
   position: relative;
@@ -157,6 +184,7 @@
   position: absolute;
   bottom: -0.5rem;
   right: 2rem;
+  /* états des deux coeurs avant la transition */
 }
 
 .button_like__heart--full {
@@ -174,7 +202,6 @@
   opacity: 1;
   -webkit-transition: opacity 800ms;
   transition: opacity 800ms;
-  /* transition retour du coeur */
 }
 
 .button_like:hover .button_like__heart--full {
@@ -187,33 +214,6 @@
   opacity: 0;
   -webkit-transition: opacity 800ms;
   transition: opacity 800ms;
-  /* transition apparition du coeur */
-}
-
-/* bouton "commander" page menus */
-.button__order {
-  border-radius: 2.5rem;
-  cursor: pointer;
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
-  color: white;
-  margin: auto;
-  text-align: center;
-  padding: 1rem 0 1rem 0;
-  width: 11rem;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border: none;
-  font-size: 1rem;
-  /* effet sur ce bouton */
-}
-
-.button__order:hover {
-  -webkit-box-shadow: 5px 5px 10px #575757;
-          box-shadow: 5px 5px 10px #575757;
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 /* fond du loader */
@@ -242,9 +242,10 @@
 
 @media screen and (min-width: 426px) {
   .spinner {
+    font-size: 3rem;
     position: absolute;
     top: 40%;
-    left: 28%;
+    left: 35%;
   }
 }
 
@@ -252,8 +253,8 @@
   .spinner {
     font-size: 4rem;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 35%;
   }
 }
 
@@ -364,7 +365,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 a {
@@ -763,7 +764,7 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 /* supprime les effets des élements déja cliqués */

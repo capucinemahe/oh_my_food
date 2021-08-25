@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 
 /* supprime les effets des élements déja cliqués */
@@ -17,16 +17,14 @@ a {
 .header {
   width: 100%;
   height: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
+  @include flex(row, center, center);
   margin: auto;
+  position: relative;
  /* icone flèche du header*/
   i {
     font-size: 1.2rem;
     position: absolute;
-    bottom: 40%;
+    bottom: 30%;
     left: 3%;
   }
 }
@@ -36,6 +34,7 @@ a {
   cursor: pointer;
   padding-top: 0.6rem;
 }
+
 /* sous header des pages menus avec une image */
 .header__menu {
   width: 100%;
@@ -45,7 +44,6 @@ a {
     object-fit: cover;
   }
 }
-
 @media screen and (min-width: 426px) {
   .header__menu__picture img {
     height: 17rem;
@@ -85,9 +83,7 @@ a {
   .menu {
     width: 98%;
     margin-left: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex (row, space-between, center);
   }
 }
 
@@ -100,16 +96,13 @@ a {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-
 @media screen and (min-width: 1024px) {
   .menu__start {
     width: 33%;
   }
-
   .menu__main {
     width: 33%;
   }
-
   .menu__dessert {
     width: 33%;
   }
@@ -170,9 +163,7 @@ a {
 
 /* texte de la vignette*/
 .menu__card__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  @include flex(column, flex-start, flex-start);
   line-height: 1.7rem;
   @include text-ajust;
 }

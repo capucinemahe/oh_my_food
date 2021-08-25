@@ -2,6 +2,7 @@
 .loadingbox {
   width: 100%;
   height: 100%;
+  background: linear-gradient(to right bottom, $rose, $violet);
   position: fixed;
   animation: disparition_loader 3s forwards;
   z-index: 1;
@@ -16,7 +17,7 @@
   position: absolute;
   top: 40%;
   left: 23%;
-  animation: load 3s forwards;
+  animation: typo_spinner 3s forwards;
   z-index: 1;
 
   @include media-min(426px) {

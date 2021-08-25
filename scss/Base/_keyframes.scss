@@ -1,29 +1,24 @@
 /* fond du loader */
-
 @keyframes disparition_loader {
     0% {
         opacity: 1;
-        background: linear-gradient(to right bottom, $rose, $violet);
         z-index: 1;
     }
 
     99% {
         opacity: 1;
-        background: linear-gradient(to right bottom, $rose, $violet);
         z-index: 1;
     }
 
     100% {
         opacity: 0;
-        display: none;
         z-index: -2;
     }
 }
 /* typo du loader avec effet blur */
-@keyframes load {
+@keyframes typo_spinner {
     0% {
         opacity: 1;
-        display: block;
     }
 
     99% {
@@ -47,6 +42,7 @@
         transform: rotate(360deg);
     }
 }
+
 /* animation d'apparition progressive des vignettes menu */
 @keyframes progress {
     0% {
