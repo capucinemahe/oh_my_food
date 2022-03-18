@@ -1,2 +1,5 @@
-# CapucineMahe_3_26072021
-hello
+# 3eme projet de ma formation OC
+
+Oh My Food 
+
+Html + préprocesseur Sass + animations CSS
